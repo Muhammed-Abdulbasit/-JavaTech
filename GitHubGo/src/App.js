@@ -38,6 +38,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-start',
     minHeight: '100vh',
+    background: 'linear-gradient(to bottom, #333333, #666666)',
+    color: '#ffffff', // Text color for better visibility on the gradient background
   },
   resultsContainer: {
     marginTop: 20,
@@ -47,7 +49,7 @@ const styles = {
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 8,
-    color: '#333',
+    color: '#007BFF', // Title color changed to the same blue as the button
   },
   repositoryCard: {
     border: '1px solid #ddd',
@@ -55,17 +57,16 @@ const styles = {
     padding: '16px',
     margin: '16px',
     textAlign: 'left',
+    background: '#444444', // Adjusted card background color
   },
   repositoryName: {
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: '8px',
-    color: '#333',
   },
   repositoryDescription: {
     fontSize: 16,
     marginBottom: '8px',
-    color: '#555',
   },
   viewButton: {
     backgroundColor: '#007BFF',
@@ -76,5 +77,7 @@ const styles = {
     cursor: 'pointer',
   },
 };
+
+
 
 export default App;

@@ -34,7 +34,7 @@ const styles = {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
-    color: '#333',
+    color: '#3399FF',
   },
   input: {
     height: 40,
@@ -49,6 +49,7 @@ const styles = {
     color: '#fff',
     padding: '8px 16px',
     border: 'none',
+    borderRadius: '4px',
     cursor: 'pointer',
   },
 };
