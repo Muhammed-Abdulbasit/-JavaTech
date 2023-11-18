@@ -1,0 +1,36 @@
+/* HomeScreen.css */
+
+/* Reset some default styles for better consistency across browsers */
+body,
+h1,
+p,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Apply a global font family */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style the container for your HomeScreen */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Make the container take the full height of the viewport */
+  background-color: #f0f0f0; /* Set a background color */
+}
+
+/* Style the title */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333; /* Set the text color */
+}
+
+/* Style any additional elements specific to your HomeScreen */

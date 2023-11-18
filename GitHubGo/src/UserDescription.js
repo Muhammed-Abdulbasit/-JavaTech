@@ -1,50 +1,41 @@
+// UserDescription.js
 import React from 'react';
-import { Text, SafeAreaView, StyleSheet, View } from 'react-native';
-import { Card, Title, Paragraph, Divider, Button } from 'react-native-paper';
 
-export default function App() {
+export const UserDescription = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Card style={styles.card}>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>GitHub Go</Text>
-        </View>
-        <Card style={styles.programmerCard}>
-          <Title>programmersyed</Title>
-          <Paragraph>
+    <div style={styles.container}>
+      <h1 style={styles.title}>GitHub Go</h1>
+      <div style={styles.card}>
+        <div style={styles.programmerCard}>
+          <h2>programmersyed</h2>
+          <p>
             Programmersyed is a senior developer at Microsoft with years of experience in software development. He specializes in creating innovative solutions and is passionate about coding, problem-solving, and staying up-to-date with the latest technologies.
-          </Paragraph>
-        </Card>
-        <Card style={styles.activityCard}>
-          <Title>User Activity</Title>
-          <Paragraph>
+          </p>
+        </div>
+        <div style={styles.activityCard}>
+          <h2>User Activity</h2>
+          <p>
             Programmersyed committed 36 lines of code to Bing. Check out their recent activity on GitHub.
-          </Paragraph>
-          <Divider />
-          <Paragraph>
+          </p>
+          <hr />
+          <p>
             In their latest commit, Programmersyed made significant contributions, committing 100 lines of code to another repository.
-          </Paragraph>
-        </Card>
-        <Button
-          mode="contained"
-          style={styles.button}
-          onPress={() => console.log('Change Description')}>
+          </p>
+        </div>
+        <button style={styles.button} onClick={() => console.log('Change Description')}>
           Change Description
-        </Button>
-        <Button
-          mode="contained"
-          style={styles.button}
-          onPress={() => console.log('Log Out')}>
+        </button>
+        <button style={styles.button} onClick={() => console.log('Log Out')}>
           Log Out
-        </Button>
-      </Card>
-    </SafeAreaView>
+        </button>
+      </div>
+    </div>
   );
-}
+};
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
-    flex: 1,
+    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#ecf0f1',
@@ -55,32 +46,32 @@ const styles = StyleSheet.create({
     padding: 16,
     marginVertical: 10,
     borderRadius: 8,
-    elevation: 4,
-  },
-  titleContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    boxShadow: '0 0 5px rgba(0, 0, 0, 0.3)',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
   programmerCard: {
-    borderWidth: 1,
-    borderColor: 'black',
     padding: 16,
     marginVertical: 10,
     borderRadius: 8,
+    border: '1px solid black',
   },
   activityCard: {
-    borderWidth: 1,
-    borderColor: 'black',
     padding: 16,
     marginVertical: 10,
     borderRadius: 8,
+    border: '1px solid black',
   },
   button: {
     marginVertical: 10,
+    backgroundColor: '#007BFF',
+    color: '#fff',
+    padding: '8px 16px',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
   },
-});
+};
