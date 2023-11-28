@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
-
+import { useEffect } from 'react';
 export const Login = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -9,7 +9,7 @@ export const Login = () => {
   });
 
   const navigate = useNavigate();
-
+  const CLIENT_ID = 'e43509bd8930071520ba';
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -25,6 +25,16 @@ export const Login = () => {
     navigate('/');
   };
 
+  useEffect(() => {
+    const querystring = window.location.search;
+    const urlpara = new URLSearchParams(querystring);
+    const codeparam = urlpara.get('code');
+    console.log(codeparam);
+  }, []);
+
+  function loginwithgithub(){
+    window.location.assign("https://github.com/login/oauth/authorize?client_id="+CLIENT_ID);
+  }
   return (
   <div className="login-container">
     <div className="title">
