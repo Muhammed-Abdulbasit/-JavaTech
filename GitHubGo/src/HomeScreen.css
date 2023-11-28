@@ -24,7 +24,7 @@ body {
   background: linear-gradient(to top, #333333, #666666);
 }
 
-.title {
+h1.title {
   font-size: 56px;
   font-weight: bold;
   margin-bottom: 16px;
@@ -55,7 +55,7 @@ body {
     border-radius: 8px; 
     background-color: #fff; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-bottom: 25%;
+    padding-bottom: 24%;
     margin-top: 10%;
 }
 
