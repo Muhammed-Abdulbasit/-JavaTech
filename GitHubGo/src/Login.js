@@ -66,7 +66,7 @@ export const Login = () => {
     />
   </div>
 
-  <button type="submit">Login</button>
+  <button onClick={loginwithgithub}>Login</button>
 </form>
 
       <p>
