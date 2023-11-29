@@ -25,11 +25,11 @@ export const SearchScreen = () => {
 
   return (
     <div className="app-container">
-      <div className="container">
         <h1 className="title">Search Screen</h1>
         <input
+          id = "inp"
           type="text"
-          placeholder="Enter search text"
+          placeholder="Search for a repository"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           onKeyPress={handleKeyPress}
@@ -38,7 +38,6 @@ export const SearchScreen = () => {
         <button onClick={handleSearch} className="button">
           Search
         </button>
-      </div>
 
       <div className="results-container">
         <h2 className="results-title">Search Results:</h2>
@@ -49,7 +48,7 @@ export const SearchScreen = () => {
               {result.description || 'No description available'}
             </p>
             {/* <a href={result.html_url} target="_blank" rel="noopener noreferrer" className="view-button"> */}
-            <Link to="/RepoScreen">View Repository</Link>
+            <Link to="/RepoScreen" className="view-button">View Repository</Link>
             {/* </a> */}
           </div>
         ))}
