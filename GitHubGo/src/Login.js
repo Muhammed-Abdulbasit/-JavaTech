@@ -22,7 +22,7 @@ export const Login = () => {
     e.preventDefault();
     // Add authentication logic here (e.g., API call, validation, etc.)
     // Redirect to the home page after successful login
-    navigate('/');
+    navigate('/HomeScreen');
   };
 
   return (
