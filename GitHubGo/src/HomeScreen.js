@@ -22,7 +22,6 @@ export const HomeScreen = () => {
      </div>
 
      <div className='profile-icon' onClick={toggleDropdown}>
-        {/* Your profile icon goes here */}
         <img src={profileIcon} alt='Profile Icon' />
         {isDropdownOpen && <ProfileDropdown />}
     </div>

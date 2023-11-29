@@ -1,6 +1,6 @@
 /* HomeScreen.css */
 .searchScreenButton{
-    background-Color: #007BFF;
+    background-Color: #532f92;
     color: #fff;
     padding: 16px 32px;
     border: none;
@@ -21,7 +21,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
-  background: linear-gradient(to top, #333333, #666666);
+  background: linear-gradient(to bottom, #ffffff, #000000);
 }
 
 h1.title {
