@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate} from 'react-router-dom';
-import './HomeScreen.css';
 import ProfileDropdown from './ProfileDropdown';
 import profileIcon from './JavaTechLogo.png';
+import './HomeScreen.css';
 
 
 export const HomeScreen = () => {
