@@ -4,6 +4,7 @@ import './Login.css';
 
 export const Login = () => {
   const [formData, setFormData] = useState({
+    code: '',
     username: '',
     password: '',
   });
@@ -18,12 +19,30 @@ export const Login = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add authentication logic here (e.g., API call, validation, etc.)
+  
+    // Exchange the code for an access token
+    const response = await axios.post('https://github.com/login/oauth/access_token', {
+      client_id: 'e43509bd8930071520ba',
+      client_secret: '577a132a53015a77087faa4405a0f785b5d6852e', // You need to add your GitHub OAuth app's client secret here
+      code: formData.code,
+    }, {
+      headers: {
+        'Accept': 'application/json'
+      },
+    });
+  
+    // The response will contain the access token
+    const accessToken = response.data.access_token;
+  
+    // Use the access token to authenticate the user
+    // ...
+  
     // Redirect to the home page after successful login
-    navigate('/HomeScreen');
+    navigate('/Homescreen');
   };
+  
 
   return (
   <div className="login-container">
@@ -57,6 +76,18 @@ export const Login = () => {
   </div>
 
   <button type="submit">Login</button>
+  <div>
+  <label htmlFor="code">Code: </label>
+  <input
+    type="text"
+    id="code"
+    name="code"
+    value={formData.code}
+    onChange={handleChange}
+    required
+  />
+</div>
+
 </form>
 
       <p>
@@ -64,5 +95,6 @@ export const Login = () => {
       </p>
       
     </div>
+    
   );
 };
