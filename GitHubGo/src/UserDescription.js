@@ -1,8 +1,11 @@
 // UserDescription.js
 import React from 'react';
+import { Header } from './Header';
 
 export const UserDescription = () => {
   return (
+    <div>
+      <Header/>
     <div style={styles.container}>
       <h1 style={styles.title}>GitHub Go</h1>
       <div style={styles.card}>
@@ -29,6 +32,7 @@ export const UserDescription = () => {
           Log Out
         </button>
       </div>
+    </div>
     </div>
   );
 };

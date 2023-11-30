@@ -1,0 +1,37 @@
+.header a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.header{
+    position: fixed;
+    margin-top: 10px;
+}
+
+.profile-icon {
+    position: fixed;
+    top: 8px;
+    right: 20px;
+    cursor: pointer;
+}
+  
+.profile-icon img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    border: 0.5px solid; 
+}
+
+.black-background {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+  }
+  
