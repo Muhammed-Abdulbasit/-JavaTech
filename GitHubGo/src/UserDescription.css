@@ -1,0 +1,83 @@
+/* UserDescription.css */
+.userContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding: 8px;
+    color: black;
+    height: 100vh;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 70%;
+    padding: 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .leftContainer {
+    padding: 16px;
+    margin-top: 10px;
+    /* border-radius: 8px;
+    border: 1px solid black; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rightContainer{
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 20%;
+    text-align: center;
+    background-color: #695acd7b;
+  }
+
+  .programmerCard{
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 50%;
+    background: #0cb4b471;
+  }
+
+  .activityCard{
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    height: 50%;
+    background: #9470db5b;
+  }
+
+  p{
+    color: black;
+    text-align: center;
+    margin-right: 15px;
+  }
+
+  .profileOptionsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .profileOptionsList li {
+    margin-bottom: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+  }
