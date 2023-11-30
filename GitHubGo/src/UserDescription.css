@@ -70,6 +70,10 @@
     margin-right: 15px;
   }
 
+  .userText{
+    color: black;
+  }
+
   .profileOptionsList {
     list-style: none;
     padding: 0;
