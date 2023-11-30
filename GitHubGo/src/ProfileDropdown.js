@@ -7,7 +7,7 @@ const ProfileDropdown = () => {
   return (
     <div className="profile-dropdown">
       <Link to="/UserDescription">Profile</Link>
-      <Link to="/Login">Logout</Link>
+      <Link to="/">Logout</Link>
     </div>
   );
 };
