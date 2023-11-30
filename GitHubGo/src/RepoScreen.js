@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Chart from 'chart.js/auto';
+import { Header } from './Header';
 import './App.css';
 
 export const RepoScreen = () => {
@@ -75,6 +76,8 @@ export const RepoScreen = () => {
   ];
 
   return (
+    <div>
+      <Header/>
     <div className="container">
       <h1 className="text">Hello, this is a simple text screen with charts and a leaderboard!</h1>
       <div className="chart-container">
@@ -104,6 +107,7 @@ export const RepoScreen = () => {
           </tbody>
         </table>
       </div>
+    </div>
     </div>
   );
 };

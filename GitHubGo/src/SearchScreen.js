@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Header } from './Header';
 import './SearchScreen.css';
 
 export const SearchScreen = () => {
@@ -24,6 +25,8 @@ export const SearchScreen = () => {
   };
 
   return (
+    <div>
+                <Header/>
     <div className="app-container">
         <h1 className="title">Search Screen</h1>
         <input
@@ -53,6 +56,7 @@ export const SearchScreen = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

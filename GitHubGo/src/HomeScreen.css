@@ -28,12 +28,12 @@ h1.title {
   font-size: 56px;
   font-weight: bold;
   margin-bottom: 16px;
-  margin-top: 20px;
+  margin-top: 70px;
   color: #333;
   text-align: center;
 }
 
-.profile-icon {
+/* .profile-icon {
     position: absolute;
     top: 0;
     right: 0;
@@ -46,7 +46,7 @@ h1.title {
     height: 40px; 
     border-radius: 50%;
     border: 0.5px solid; 
-}
+} */
 
 .previous-searches{
     max-width: 800px;
@@ -56,7 +56,7 @@ h1.title {
     border-radius: 8px; 
     background-color: #fff; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-bottom: 24%;
+    padding-bottom: 20%;
     margin-top: 10%;
 }
 
