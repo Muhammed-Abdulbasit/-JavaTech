@@ -60,3 +60,16 @@ h1.title {
     margin-top: 10%;
 }
 
+
+    .slogan {
+        font-family: 'Arial', sans-serif; /* Choose a suitable font family */
+        font-size: 36px;
+        font-weight: bold;
+        color: white; /* Choose a vibrant color */
+        text-align: center;
+        margin-top: 20px;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+        
+      }
+
