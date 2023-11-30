@@ -4,7 +4,7 @@ import { HomeScreen } from './HomeScreen';
 import { UserDescription } from './UserDescription';
 import { SearchScreen } from './SearchScreen';
 import { Login } from './Login';
-import { RepoScreen } from './RepoScreen';
+
 
 
 export const AppRoutes = () => {
@@ -15,7 +15,7 @@ export const AppRoutes = () => {
        <Route path="/HomeScreen" element={<HomeScreen />} />
        <Route path="/SearchScreen" element={<SearchScreen />} />
        <Route path="/UserDescription" element={<UserDescription />} />
-       <Route path="/RepoScreen" element={<RepoScreen />} />
+       
      </Routes>
    </Router>
  );

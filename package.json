@@ -1,8 +1,14 @@
 {
   "dependencies": {
+    "@octokit/core": "^5.0.2",
+    "@octokit/rest": "^20.0.2",
+    "canvasjs": "^1.8.3",
     "chart.js": "^4.4.0",
     "react-chartjs-2": "^5.2.0",
     "react-native": "^0.72.7",
-    "react-native-chart-kit": "^6.12.0"
+    "react-native-chart-kit": "^6.12.0",
+    "react-router-dom": "^6.20.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^3.5.0"
   }
 }
