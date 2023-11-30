@@ -1,7 +1,7 @@
 // UserDescription.js
 import React from 'react';
 import { Header } from './Header';
-import './UserDescription.css'; // Import the CSS file
+import './UserDescription.css'; 
 
 export const UserDescription = () => {
   return (

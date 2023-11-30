@@ -1,9 +1,9 @@
-// src/App.js
-
+// RepoScreen.js
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Chart from 'chart.js/auto';
 import { Header } from './Header';
-import './App.css';
+import './RepoScreen.css'; // Import the CSS file
 
 export const RepoScreen = () => {
   useEffect(() => {
@@ -69,90 +69,48 @@ export const RepoScreen = () => {
 
   // Leaderboard data
   const leaderboardData = [
-    { rank: 1, name: 'Player 1', score: 150 },
-    { rank: 2, name: 'Player 2', score: 120 },
-    { rank: 3, name: 'Player 3', score: 100 },
+    { rank: 1, name: 'Contributor 1', Commits: 20 },
+    { rank: 2, name: 'Contributor 2', Commits: 17 },
+    { rank: 3, name: 'Contributor 3', Commits: 8 },
     // Add more entries as needed
   ];
 
   return (
     <div>
-      <Header/>
-    <div className="container">
-      <h1 className="text">Hello, this is a simple text screen with charts and a leaderboard!</h1>
-      <div className="chart-container">
-        <canvas id="myChart1" width="400" height="200"></canvas>
-      </div>
-      <div className="chart-container">
-        <canvas id="myChart2" width="400" height="200"></canvas>
-      </div>
-      <div className="leaderboard-container">
-        <h2>Leaderboard</h2>
-        <table className="leaderboard-table">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Name</th>
-              <th>Score</th>
-            </tr>
-          </thead>
-          <tbody>
-            {leaderboardData.map((player) => (
-              <tr key={player.rank}>
-                <td>{player.rank}</td>
-                <td>{player.name}</td>
-                <td>{player.score}</td>
+      <Header />
+      <div className="repoContainer">
+        <h1 className="text">Commit chart</h1>
+        <div className="chart-container">
+          <canvas id="myChart1" width="400" height="200"></canvas>
+        </div>
+        <div className="chart-container">
+          <canvas id="myChart2" width="400" height="200"></canvas>
+        </div>
+        <div className="leaderboard-container">
+          <h2>Leaderboard</h2>
+          <table className="leaderboard-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Commits</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {leaderboardData.map((player) => (
+                <tr key={player.rank}>
+                  <td>{player.rank}</td>
+                  <td>{player.name}</td>
+                  <td>{player.Commits}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <Link to="/SearchScreen" className="search-again-button">Search Again</Link>
       </div>
-    </div>
     </div>
   );
 };
-
-const styles = `
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .text {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 16px;
-  }
-
-  .chart-container {
-    margin-top: 16px;
-  }
-
-  .leaderboard-container {
-    margin-top: 32px;
-  }
-
-  .leaderboard-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 8px;
-  }
-
-  .leaderboard-table th,
-  .leaderboard-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
-`;
-
-const styleSheet = document.createElement('style');
-styleSheet.type = 'text/css';
-styleSheet.innerText = styles;
-document.head.appendChild(styleSheet);
 
 export default RepoScreen;
