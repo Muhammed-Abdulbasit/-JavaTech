@@ -7,6 +7,7 @@ export const Login = () => {
     username: '',
     password: '',
   });
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
@@ -20,49 +21,54 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add authentication logic here (e.g., API call, validation, etc.)
-    // Redirect to the home page after successful login
-    navigate('/HomeScreen');
+
+    // Check if the username is Muhammed-Abdulbasit
+    if (formData.username === 'Muhammed-Abdulbasit') {
+      // Redirect to the HomeScreen
+      navigate('/HomeScreen');
+    } else {
+      // Display an error message if the username is not Muhammed-Abdulbasit
+      setError('Username is not registered in the database. Access denied.');
+    }
   };
 
   return (
-  <div className="login-container">
-    <div className="title">
-      <h1>GitHub Go</h1>
-    </div>
+    <div className="login-container">
+      <div className="title">
+        <h1>GitHub Go</h1>
+      </div>
       <h2 className="second-title">Login</h2>
       <form onSubmit={handleSubmit}>
-  <div>
-    <label htmlFor="username">Username: </label>
-    <input
-      type="text"
-      id="username"
-      name="username"
-      value={formData.username}
-      onChange={handleChange}
-      required
-    />
-  </div>
+        <div>
+          <label htmlFor="username">Username: </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-  <div>
-    <label htmlFor="password">Password: </label>
-    <input
-      type="password"
-      id="password"
-      name="password"
-      value={formData.password}
-      onChange={handleChange}
-      required
-    />
-  </div>
+        <div>
+          <label htmlFor="password">Password: </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-  <button type="submit">Login</button>
-</form>
+        <button type="submit">Login</button>
+      </form>
 
-      <p>
-        Please login with your GitHub username and password
-      </p>
-      
+      {error && <p className="error-message">{error}</p>}
+
+      <p>Please login with your GitHub username and password</p>
     </div>
   );
 };
