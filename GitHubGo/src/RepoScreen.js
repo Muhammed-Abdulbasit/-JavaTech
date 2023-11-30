@@ -6,6 +6,11 @@ import { Header } from './Header';
 import './RepoScreen.css'; // Import the CSS file
 
 export const RepoScreen = () => {
+  // Function to generate random data for the chart
+  const generateRandomData = () => {
+    return Array.from({ length: 5 }, () => Math.floor(Math.random() * 10) + 1);
+  };
+
   useEffect(() => {
     // Data for the charts
     const chartData1 = {
@@ -13,7 +18,7 @@ export const RepoScreen = () => {
       datasets: [
         {
           label: 'Dataset 1',
-          data: [4, 6, 5, 7, 3],
+          data: generateRandomData(),
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1,
@@ -26,7 +31,7 @@ export const RepoScreen = () => {
       datasets: [
         {
           label: 'Dataset 2',
-          data: [2, 1, 3, 2, 1],
+          data: generateRandomData(),
           backgroundColor: 'rgba(54, 162, 235, 0.2)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1,
@@ -83,6 +88,7 @@ export const RepoScreen = () => {
         <div className="chart-container">
           <canvas id="myChart1" width="400" height="200"></canvas>
         </div>
+        <h1 className="text">Pull Requests</h1>
         <div className="chart-container">
           <canvas id="myChart2" width="400" height="200"></canvas>
         </div>
